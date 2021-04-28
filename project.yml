@@ -2,10 +2,10 @@
 - name: create project
   hosts: all
   remote_user: root
-  vars_prompt:
-    - name: OS_PROJECT
-      prompt: Entrer le nom du projet
-      private: no
+#  vars_prompt:
+#    - name: OS_PROJECT
+#      prompt: Entrer le nom du projet
+#      private: no
   vars:
     ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
     OS_USERNAME: "admin"
@@ -17,6 +17,7 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
     OS_DNS_NAMESERVER1: "8.8.8.8"
+    OS_PROJECT_NAME: "admin"    
   tasks:
     - debug: var=ansible_host
     - name: Create a project
