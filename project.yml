@@ -1,6 +1,6 @@
 ---
 - name: create project
-  hosts: ansible_client
+  hosts: all
   remote_user: root
   vars_prompt:
     - name: OS_PROJECT
