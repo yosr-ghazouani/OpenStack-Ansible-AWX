@@ -25,8 +25,8 @@
 #    - debug: var=ansible_host   
     - name: create a new instance
       os_server:
-      state: present
-      auth:
+       state: present
+       auth:
         auth_url: "{{ OS_AUTH_URL }}"
         username: "{{ OS_USERNAME }}"
         password: "{{ OS_PASSWORD }}"
