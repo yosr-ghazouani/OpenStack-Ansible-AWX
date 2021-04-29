@@ -1,0 +1,35 @@
+
+---
+- name: create a snapshot
+  hosts: all
+  vars:
+#vars auth openstack
+    ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
+    OS_USERNAME: "admin"
+    OS_PASSWORD: "b6bb4b7857fa4119"
+    OS_REGION_NAME: "RegionOne"
+    OS_AUTH_URL: "http://172.25.52.127:5000/v3"
+    OS_USER_DOMAIN_NAME: "Default"
+    OS_PROJECT_DOMAIN_NAME: "Default"
+    PS1: '[\u@\h \W(keystone_admin)]\$'
+#vars project
+    OS_PROJECT_NAME: "admin"
+    OS_PROJECT: "safa"
+    OS_DNS_NAMESERVER1: "8.8.8.8"
+#vars snapshot
+    NAME_SNAPSHOT: "snapshot1"
+    NAME_VOLUME: "volume1"
+  tasks:
+
+    - name : create a volume
+      os_volume_snapshot:
+        state: present
+        auth:
+          auth_url: "{{ OS_AUTH_URL }}"
+          username: "{{ OS_USERNAME }}"
+          password: "{{ OS_PASSWORD }}"
+          project_name: "{{ OS_PROJECT_NAME }}"
+          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+        display_name: "{{ NAME_SNAPSHOT }}"
+        volume: "{{ NAME_VOLUME }}"
