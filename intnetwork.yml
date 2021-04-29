@@ -14,7 +14,7 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
     OS_PROJECT: "safa"
-    OS_DNS_NAMESERVER1: "8.8.8.8"    
+    OS_DNS_NAMESERVER: "8.8.8.8"    
 #vars interne network
     NAME_INT_NETWORK: "int_network"
 #vars interne subnet
