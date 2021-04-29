@@ -18,7 +18,7 @@
     NAME_INSTANCE: "instance1"
     NAME_INT_NETWORK: "int_network"
 #    NAME_IMAGE: "centos7"
-    NAME_IMAGE: "cirross"
+    NAME_IMAGE: "/home/admin/Téléchargements/cirros-0.3.4-x86_64-disk.img"
     SECURITY_GROUP: "groupe1"
     KEY_NAME: ansible_key
     NAME_FLAVOR: "m1.large"
