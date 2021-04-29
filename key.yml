@@ -13,6 +13,7 @@
     OS_PROJECT_DOMAIN_NAME: "Default"
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
+    OS_PROJECT: "safa"
 #vars key
     KEY_NAME: ansible_key
   tasks:
@@ -24,7 +25,7 @@
          auth_url: "{{ OS_AUTH_URL }}"
          username: "{{ OS_USERNAME }}"
          password: "{{ OS_PASSWORD }}"
-         project_name: "{{ OS_PROJECT_NAME }}"
+         project_name: "{{ OS_PROJECT }}"
          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
        name: "{{ KEY_NAME }}"
