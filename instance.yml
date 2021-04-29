@@ -22,7 +22,7 @@
     KEY_NAME: ansible_key
     NAME_FLAVOR: "flavor2"
   tasks:
-    - debug: var=ansible_host   
+#    - debug: var=ansible_host   
     - name: create a new instance
       os_server:
       state: present
