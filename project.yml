@@ -17,7 +17,7 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
     OS_DNS_NAMESERVER1: "8.8.8.8"
-    OS_PROJECT_NAME: "admin"    
+    OS_PROJECT: "safa"    
   tasks:
     - debug: var=ansible_host
     - name: Create a project
