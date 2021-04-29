@@ -1,5 +1,5 @@
 ---
-- name: create project
+- name: create externe network
   hosts: all
   remote_user: root
   vars:
