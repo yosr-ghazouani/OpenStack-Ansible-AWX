@@ -1,5 +1,5 @@
 ---
-- name: create externe network
+- name: create a router
   hosts: all
   remote_user: root
   vars:
