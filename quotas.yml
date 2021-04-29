@@ -26,24 +26,24 @@
     GIGABYTES_PROJECT: "500"
     - name: set a project quotas
       os_quota:
-       state: present
-       auth:
-         auth_url: "{{ OS_AUTH_URL }}"
-         username: "{{ OS_USERNAME }}"
-         password: "{{ OS_PASSWORD }}"
-         project_name: "{{ OS_PROJECT_NAME }}"
-         os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
-         os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
-       name: "{{ OS_PROJECT }}"
-       instances: "{{ INSTANCES_PROJECT }}"
-       cores: "{{ CORES_PROJECT }}"
-       ram: "{{ RAM_PROJECT }}"
-       volumes: "{{ VOLUMES_PROJECT }}"
-       snapshots: "{{ SNAPSHOTS_PROJECT }}"
-       security_group: "{{ SECURITY_GROUP_PROJECT }}"
-       network: "{{ NETWORK_PROJECT }}"
-       subnet: "{{ SUBNET_PROJECT }}"
-       gigabytes: "{{ GIGABYTES_PROJECT }}"
+      state: present
+      auth:
+        auth_url: "{{ OS_AUTH_URL }}"
+        username: "{{ OS_USERNAME }}"
+        password: "{{ OS_PASSWORD }}"
+        project_name: "{{ OS_PROJECT_NAME }}"
+        os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+        os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+      name: "{{ OS_PROJECT }}"
+      instances: "{{ INSTANCES_PROJECT }}"
+      cores: "{{ CORES_PROJECT }}"
+      ram: "{{ RAM_PROJECT }}"
+      volumes: "{{ VOLUMES_PROJECT }}"
+      snapshots: "{{ SNAPSHOTS_PROJECT }}"
+      security_group: "{{ SECURITY_GROUP_PROJECT }}"
+      network: "{{ NETWORK_PROJECT }}"
+      subnet: "{{ SUBNET_PROJECT }}"
+      gigabytes: "{{ GIGABYTES_PROJECT }}"
 
 
  
