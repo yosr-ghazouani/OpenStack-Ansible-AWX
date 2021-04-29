@@ -22,25 +22,28 @@
     KEY_NAME: ansible_key
     NAME_FLAVOR: "flavor2"
   tasks:
-#    - debug: var=ansible_host   
+
     - name: create a new instance
       os_server:
        state: present
        auth:
-        auth_url: "{{ OS_AUTH_URL }}"
-        username: "{{ OS_USERNAME }}"
-        password: "{{ OS_PASSWORD }}"
-        project_name: "{{ OS_PROJECT }}"
-        os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
-        os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
-      name: "{{ NAME_INSTANCE }}"
-      image: "{{ NAME_IMAGE }}"
-      key_name: "{{ KEY_NAME }}"
-      flavor: "{{ NAME_FLAVOR }}"
-      network: "{{ NAME_INT_NETWORK }}"
-      security_groups: "{{ SECURITY_GROUP }}"
-      wait: yes
-      auto_ip: yes
-      region_name: RegionOne
+         auth_url: "{{ OS_AUTH_URL }}"
+         username: "{{ OS_USERNAME }}"
+         password: "{{ OS_PASSWORD }}"
+         project_name: "{{ OS_PROJECT }}"
+         os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+         os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+       name: "{{ NAME_INSTANCE }}"
+       image: "{{ NAME_IMAGE }}"
+       key_name: "{{ KEY_NAME }}"
+       flavor: "{{ NAME_FLAVOR }}"
+       network: "{{ NAME_INT_NETWORK }}"
+       security_groups: "{{ SECURITY_GROUP }}"
+       auto_ip: yes
+       region_name: RegionOne
+
+
+
+   
 
     
