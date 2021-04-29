@@ -14,7 +14,7 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
 #vars project
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "ansibletest-project1"
+    OS_PROJECT: "safa"
     OS_DNS_NAMESERVER1: "8.8.8.8"
 #vars volume
     NAME_VOLUME: "volume1"
