@@ -16,7 +16,7 @@
     OS_PROJECT: "safa"
 #vars ip floating 
     NAME_INSTANCE: "instance1"
-    NAME_EXT_NERWORK: "externe_network"
+    NAME_EXT_NETWORK: "externe_network"
   tasks:
     - debug: var=ansible_host
     - name: create a floating_ip
