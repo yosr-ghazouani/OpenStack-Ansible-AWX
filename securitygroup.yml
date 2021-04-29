@@ -16,6 +16,7 @@
     OS_PROJECT: "safa"
 #vars security_group
     SECURITY_GROUP: "groupe1"
+    PROTOCOL: "tcp"
   tasks:
     - debug: var=ansible_host  
     - name: Create a security group
