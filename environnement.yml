@@ -1,6 +1,6 @@
 ---
 - name: create an environnement
-  hosts: ansible_client
+  hosts: all
   remote_user: root
   vars:
 #vars auth openstack
