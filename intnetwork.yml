@@ -47,7 +47,7 @@
         network_name: "{{ NAME_INT_NETWORK }}"
         name: "{{ NAME_INT_SUBNET }}"
         cidr: "{{ CIDR_INT_SUBNET }}"
-        dns_nameservers: "{{ DNS_NAMESERVERS }}"
+        dns_nameservers: "{{ OS_DNS_NAMESERVER }}"
         project: "{{ OS_PROJECT }}"
         
     
