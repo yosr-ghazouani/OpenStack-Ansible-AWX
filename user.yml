@@ -1,0 +1,68 @@
+---
+- name: create project
+  hosts: all
+  remote_user: root
+   vars:
+#vars auth openstack
+    ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
+    OS_USERNAME: "admin"
+    OS_PASSWORD: "b6bb4b7857fa4119"
+    OS_REGION_NAME: "RegionOne"
+    OS_AUTH_URL: "http://172.25.52.127:5000/v3"
+    OS_USER_DOMAIN_NAME: "Default"
+    OS_PROJECT_DOMAIN_NAME: "Default"
+    PS1: '[\u@\h \W(keystone_admin)]\$'
+    OS_PROJECT_NAME: "admin"
+
+ #vars user
+    USERMEMBER: "nadia"
+    PASSWORD_USER: "root"
+    EMAIL_USER: "nadia@gmail.com"
+  tasks:
+    - debug: var=ansible_host
+    - name: Create user
+      os_user:
+        state: present
+        auth:
+          auth_url: "{{ OS_AUTH_URL }}"
+          username: "{{ OS_USERNAME }}"
+          password: "{{ OS_PASSWORD }}"
+          project_name: "{{ OS_PROJECT_NAME }}"
+          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+        name: "{{ USERMEMBER }}"
+        password: "{{ PASSWORD_USER }}"
+        email: "{{ EMAIL_USER }}"
+        domain: default
+        default_project: "{{ OS_PROJECT }}"
+
+    - name: Attach user to project
+      os_user_role:
+        state: present
+        auth:
+          auth_url: "{{ OS_AUTH_URL }}"
+          username: "{{ OS_USERNAME }}"
+          password: "{{ OS_PASSWORD }}"
+          project_name: "{{ OS_PROJECT_NAME }}"
+          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+        role: _member_
+        region_name: RegionOne
+        project: "{{ OS_PROJECT }}"
+        user: "{{ USERMEMBER }}"
+    - name: Attach admin to project
+      os_user_role:
+        state: present
+        auth:
+          auth_url: "{{ OS_AUTH_URL }}"
+          username: "{{ OS_USERNAME }}"
+          password: "{{ OS_PASSWORD }}"
+          project_name: "{{ OS_PROJECT_NAME }}"
+          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+        user: admin
+        role: admin
+        project: "{{ OS_PROJECT }}"
+
+    
+    
