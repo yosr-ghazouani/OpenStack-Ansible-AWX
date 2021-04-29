@@ -1,5 +1,5 @@
 ---
-- name: create a flavor
+- name: create an instance 
   hosts: all
   remote_user: root
   vars:
@@ -20,7 +20,7 @@
     NAME_IMAGE: "centos7"
     SECURITY_GROUP: "groupe1"
     KEY_NAME: ansible_key
-    NAME_FLAVOR: "flavor2"
+    NAME_FLAVOR: "m1.large"
   tasks:
 
     - name: create a new instance
