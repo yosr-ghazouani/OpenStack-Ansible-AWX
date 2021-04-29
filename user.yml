@@ -16,9 +16,9 @@
     OS_PROJECT: "safa"
 
  #vars user
-    USERMEMBER: "nadia"
+    USERMEMBER: "safa"
     PASSWORD_USER: "root"
-    EMAIL_USER: "nadia@gmail.com"
+    EMAIL_USER: "safa@gmail.com"
   tasks:
     - debug: var=ansible_host
     - name: Create user
