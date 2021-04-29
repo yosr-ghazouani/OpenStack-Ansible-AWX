@@ -24,6 +24,8 @@
     NETWORK_PROJECT: "50"
     SUBNET_PROJECT: "50"
     GIGABYTES_PROJECT: "500"
+    tasks:
+    - debug: var=ansible_host
     - name: set a project quotas
       os_quota:
       state: present
@@ -47,5 +49,4 @@
 
 
  
-  tasks:
-    - debug: var=ansible_host
+  
