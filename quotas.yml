@@ -16,14 +16,17 @@
     OS_PROJECT: "{{ project | default(None) }}"
 #vars quota
     INSTANCES_PROJECT: "{{ instances | default(None) }}"
-    CORES_PROJECT: "10"
-    RAM_PROJECT: "15000"
-    VOLUMES_PROJECT: "6"
-    SNAPSHOTS_PROJECT: "6"
-    SECURITY_GROUP_PROJECT: "8"
-    NETWORK_PROJECT: "50"
+    CORES_PROJECT: "{{ cores | default(None) }}"
+    RAM_PROJECT: "{{ ram | default(None) }}"
+    VOLUMES_PROJECT: "{{ volumes | default(None) }}"
+    SNAPSHOTS_PROJECT: "{{ snapshot | default(None) }}"
+    SECURITY_GROUP_PROJECT: "{{ security_group | default(None) }}"
+    NETWORK_PROJECT: "{{ network | default(None) }}"
     SUBNET_PROJECT: "50"
-    GIGABYTES_PROJECT: "500"
+    GIGABYTES_PROJECT: "{{ storage | default(None) }}"
+    FLOATING_IPS: "{{ number_of_floating_ips | default(None) }}"
+    PORT: "{{ number_of_port | default(None) }}"
+    ROUTER: "{{ number_of_router | default(None) }}"
     tasks:
     - debug: var=ansible_host
     - name: set a project quotas
@@ -46,6 +49,10 @@
       network: "{{ NETWORK_PROJECT }}"
       subnet: "{{ SUBNET_PROJECT }}"
       gigabytes: "{{ GIGABYTES_PROJECT }}"
+      floating_ips: "{{ FLOATING_IPS }}"
+      port: "{{ PORT }}"
+      router:  "{{ ROUTER }}"
+
 
 
  
