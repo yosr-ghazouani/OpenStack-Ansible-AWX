@@ -16,7 +16,7 @@
     OS_PROJECT: "{{ project | default(None) }}"
 #vars quota
     INSTANCES_PROJECT: "{{ instances | default(None) }}"
-    CORES_PROJECT: "10"
+    CORES_PROJECT: "{{ cores | default(None) }}"
     RAM_PROJECT: "15000"
     VOLUMES_PROJECT: "6"
     SNAPSHOTS_PROJECT: "6"
