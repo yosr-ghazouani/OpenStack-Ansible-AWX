@@ -20,8 +20,8 @@
     RAM_PROJECT: "{{ ram | default(None) }}"
     VOLUMES_PROJECT: "{{ volumes | default(None) }}"
     SNAPSHOTS_PROJECT: "{{ snapshot | default(None) }}"
-    SECURITY_GROUP_PROJECT: "8"
-    NETWORK_PROJECT: "50"
+    SECURITY_GROUP_PROJECT: "{{ security_group | default(None) }}"
+    NETWORK_PROJECT: "{{ network | default(None) }}"
     SUBNET_PROJECT: "50"
     GIGABYTES_PROJECT: "500"
 
