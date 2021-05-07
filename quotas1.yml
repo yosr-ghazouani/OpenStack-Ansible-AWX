@@ -23,7 +23,7 @@
     SECURITY_GROUP_PROJECT: "{{ security_group | default(None) }}"
     NETWORK_PROJECT: "{{ network | default(None) }}"
     SUBNET_PROJECT: "50"
-    GIGABYTES_PROJECT: "500"
+    GIGABYTES_PROJECT: "{{ storage | default(None) }}"
 
 
   tasks:
