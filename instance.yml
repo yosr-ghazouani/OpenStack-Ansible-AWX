@@ -40,7 +40,7 @@
        flavor: "{{ NAME_FLAVOR }}"
        network: "{{ NAME_INT_NETWORK }}"
        security_groups: "{{ SECURITY_GROUP }}"
-       auto_ip: yes
+   #    auto_ip: yes
        region_name: RegionOne
 
 
