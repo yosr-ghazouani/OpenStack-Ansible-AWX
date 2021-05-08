@@ -13,15 +13,15 @@
     OS_PROJECT_DOMAIN_NAME: "Default"
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "safa"
+    OS_PROJECT: "Test"
 #vars instance
     NAME_INSTANCE: "instance1"
     NAME_INT_NETWORK: "int_network"
 #    NAME_IMAGE: "centos7"
-    NAME_IMAGE: "cirros-0.3.4-x86_64-disk"
+    NAME_IMAGE: "cirross"
     SECURITY_GROUP: "groupe1"
     KEY_NAME: ansible_key
-    NAME_FLAVOR: "m1.large"
+    NAME_FLAVOR: "m1.tiny"
   tasks:
 
     - name: create a new instance
