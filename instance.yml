@@ -16,7 +16,7 @@
     OS_PROJECT: "Test"
 #vars instance
     NAME_INSTANCE: "instance1"
-    NAME_INT_NETWORK: "int_network"
+    NAME_INT_NETWORK: "interne_network"
 #    NAME_IMAGE: "centos7"
     NAME_IMAGE: "cirross"
     SECURITY_GROUP: "groupe1"
