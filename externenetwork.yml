@@ -20,7 +20,7 @@
     CIDR_SUBNET: "192.168.0.0/24"
     DNS_NAMESERVERS: "8.8.8.8"
     ALLOCATION_POOL_START: "192.168.0.10"
-    ALLOCATION_POOL_END: "192.168.0.20"
+    ALLOCATION_POOL_END: "192.168.0.100"
     tasks:
     - debug: var=ansible_host
     - name : create an externe network
