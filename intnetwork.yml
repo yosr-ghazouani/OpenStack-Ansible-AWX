@@ -16,7 +16,7 @@
     OS_PROJECT: "safa"
     OS_DNS_NAMESERVER: "8.8.8.8"    
 #vars interne network
-    NAME_INT_NETWORK: "int_network"
+    NAME_INT_NETWORK: "interne_network"
 #vars interne subnet
     NAME_INT_SUBNET: "int_subnet"
     CIDR_INT_SUBNET: "10.0.16.0/24"
