@@ -19,7 +19,7 @@
     NAME_INT_NETWORK: "{{ int_network | default(None) }}"
 #vars interne subnet
     NAME_INT_SUBNET: "{{ int_subnet | default(None) }}"
-    CIDR_INT_SUBNET: "10.0.16.0/24"
+    CIDR_INT_SUBNET: "{{ cidr | default(None) }}"
   tasks:
     - debug: var=ansible_host
     - name : create an interne  network
