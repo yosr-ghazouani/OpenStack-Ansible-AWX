@@ -16,7 +16,7 @@
     OS_PROJECT: "{{ project | default(None) }}"
 #vars router
     NAME_ROUTER: "{{ router | default(None) }}"
-    NAME_EXT_NETWORK: "externe_network"
+    NAME_EXT_NETWORK: "{{ ext_network | default(None) }}"
     NAME_EXT_SUBNET: "externe_subnet"
     NAME_INT_SUBNET: "int_subnet"
   tasks:
