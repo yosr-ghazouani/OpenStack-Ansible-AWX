@@ -13,9 +13,9 @@
     OS_PROJECT_DOMAIN_NAME: "Default"
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "Test"
+    OS_PROJECT: "{{ project | default(None) }}"
 #vars security_group
-    SECURITY_GROUP: "groupe1"
+    SECURITY_GROUP: "{{ sec_group | default(None) }}"
     PROTOCOL: "tcp"
   tasks:
     - debug: var=ansible_host  
