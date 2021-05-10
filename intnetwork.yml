@@ -13,7 +13,7 @@
     OS_PROJECT_DOMAIN_NAME: "Default"
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "Test"
+    OS_PROJECT: "{{ project | default(None) }}"
     OS_DNS_NAMESERVER: "8.8.8.8"    
 #vars interne network
     NAME_INT_NETWORK: "{{ int_network | default(None) }}"
