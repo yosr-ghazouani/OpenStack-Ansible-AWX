@@ -14,13 +14,13 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_PROJECT_NAME: "admin"
 #vars externe network
-    NAME_EXT_NETWORK: "externe_network"
+    NAME_EXT_NETWORK: "{{ ext_network | default(None) }}"
 #vars externe subnet
-    NAME_EXT_SUBNET: "externe_subnet"
-    CIDR_SUBNET: "192.168.0.0/24"
+    NAME_EXT_SUBNET: "{{ ext_subnet | default(None) }}"
+    CIDR_SUBNET: "{{ adresse_subnet | default(None) }}"
     DNS_NAMESERVERS: "8.8.8.8"
-    ALLOCATION_POOL_START: "192.168.0.10"
-    ALLOCATION_POOL_END: "192.168.0.100"
+    ALLOCATION_POOL_START: "{{ pool_start | default(None) }}"
+    ALLOCATION_POOL_END: "{{ pool_end | default(None) }}"
     tasks:
     - debug: var=ansible_host
     - name : create an externe network
