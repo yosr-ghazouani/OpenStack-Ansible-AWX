@@ -15,8 +15,8 @@
     OS_PROJECT_NAME: "admin"
  
 #vars image
-    NAME_IMAGE: "centos77"
-    FILENAME: "{{ filename | default(None) }}""
+    NAME_IMAGE: "{{ imagename | default(None) }}"
+    FILENAME: "{{ filename | default(None) }}"
     DISK_FORMAT: "iso"
     DISTRO: "centos"    
   tasks:
