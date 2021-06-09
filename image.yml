@@ -16,7 +16,7 @@
  
 #vars image
     NAME_IMAGE: "centos77"
-    FILENAME: "/home/admin/Téléchargements/"{{ filename | default(None) }}""
+    FILENAME: "{{ filename | default(None) }}""
     DISK_FORMAT: "iso"
     DISTRO: "centos"    
   tasks:
