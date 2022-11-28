@@ -38,6 +38,7 @@ Une fois que nous avons créé avec succès l’utilisateur, nous avons cloné l
 
 #### Création d’un fichier de configuration Devstack
 Lors de cette étape, nous avons accédé au répertoire « devstack » et créé un fichier de configuration appelé « local.conf ». Ce dernier contient les informations indiquées dans la figure ci-dessous. 
+<br>
 
 ![Devstack](/images/devstack/1.PNG)
 
@@ -56,6 +57,7 @@ Ce script permet l’installation de ces services : <br>
 - Placement - API de placement <br>
 
 La sortie de la commande ci-dessus est la suivante :
+<br>
 ![devstack](/images/devstack/2.PNG)
 <br>
 Cela confirme que tout s'est bien configuré et que nous pouvons accéder au tableau de bord horizon via l’URL : http://172.25.52.123/dashboard.
@@ -127,7 +129,9 @@ Pour déployer OpenStack avec un seul nœud, nous avons exécuté la commande su
   `$ sudo packstack --allinone`
 
 Nos paramètres de connexion sont stockés dans le fichier « keystonerc_admin » comme le montre la figure ci-dessous.
+<br>
 ![packstack](/images/packstack/3.PNG)
+<br>
 
 Une fois le processus d'installation est terminé, nous pouvons accéder
 au tableau de bord OpenStack en accédant à « http://172.25.52.127/dasboard » .
@@ -192,9 +196,11 @@ Maintenant, nous pouvons installer AWX en clonant le code source à partir de Gi
 <br>
   `$ sudo git clone –b 17.1.0 https://github.com/ansible/awx.git`
 Après, nous avons accédé au répertoire du programme d’installation AWX et nous avons modifié le fichier inventaire en indiquant les paramètres d’accès à l’interface graphique et la clé secrète générée par la commande « pwgen ». 
+<br>
 ![ansible](/images/ansible/2.PNG)
 <br>
 Enfin, nous avons exécuté le palybook « install.yml » qui permet d’installer AWX et nous avons listé les conteneurs en cours d’exécution en utilisant la commande « docker ps ».
+<br>
 ![ansible](/images/ansible/3.PNG)
 <br>
 Nous pouvons alors accéder au tableau de bord via l’adresse IP suivante : 
@@ -211,22 +217,29 @@ Le tableau de bord présente des informations sur notre serveur AWX qui sont :
 Dans AWX, une enquête est un ensemble de questions que vous pouvez configurer pour poser avant d'exécuter le script et stocker ses réponses sous forme de variables. Les étapes de configuration peuvent être résumées comme suit :
 #### Ajout d’une enquête pour le modèle « utilisateur »
 Une enquête peut comprendre n'importe quel nombre de questions. L’enquête spécifiée au modèle « utilisateur » se compose de quatre questions. La figure ci-dessus représente la première question permettant la saisie du nom 
-d’utilisateur.
+d’utilisateur.<br>
 ![ansible awx](/images/awx/1.PNG)
 <br>
 La deuxième question qui demande la saisie de nom du projet, est présentée dans la figure cidessous.
+<br>
 ![ansible](/images/awx/2.PNG)
+<br>
 La troisième question permet de saisir le mot de passe de l’utilisateur OpenStack comme indiqué dans cette figure.
+<br>
 ![ansible awx](/images/awx/3.PNG)
+<br>
 Le type de la réponse est password. Elle sera cryptée et traitée comme des informations sensibles.
 <br>
 La dernière question relève de l’email de l’utilisateur comme le montre la figure ci-dessous.
+<br>
 ![ansible awx](/images/awx/4.PNG)
+<br>
 La réponse de l’utilisateur à la question ci-dessus sera stockée dans la variable « email ». 
 Il s'agit de la variable à utiliser par le playbook « utilisateur » qui est hébergé dans le référentiel git : https://github.com/yosr-ghazouani/ansible-openstack-awx.
 #### Ajout d’une enquête pour le modèle « quotas »
 Cette enquête se compose de quatre questions qui permettent de spécifier les 
 caractéristiques de l’environnement Cloud y compris RAM, VCPUs et l’espace de stockage comme l’indiquent la figure ci-dessous.
+<br>
 ![ansible awx](/images/awx/5.PNG)
 
 
